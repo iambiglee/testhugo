@@ -20,19 +20,26 @@ markdown是一个很好玩的文本记录功能，希望我可以写出一个很
 {{< /columns >}}
 
 
-## Tempora nisi nunc
+## 模块测试
 
 测试一其他的一些功能，测试页面代码块的功能
 
     var panel = ram_design;
-    if (backup + system) {
+    if (backup + system) {![](2023-06-29-13-52-30.png)
         file.readPoint = network_native;
         sidebar_engine_device(cell_tftp_raster,
                 dual_login_paper.adf_vci.application_reader_design(
                 graphicsNvramCdma, lpi_footer_snmp, integer_model));
     }
 
-贴图片是一个需要好好考虑的问题
+贴图片测试
+1. 安装插件 paste image
+2. 配置数据pasteImage.path 为 {currentpath}/pic
+
+![](2023-06-29-14-10-05.png)
+![aaaaaaa](pic/2023-06-29-14-11-33.png)
+
+## 代码块测试
 ```java
 String name="barack";
 int age=27
