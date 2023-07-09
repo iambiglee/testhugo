@@ -1,0 +1,17 @@
+0 使用命令更新资源库
+git submodule update --remote
+1. 登录 github 以及设置登录验证
+2. 修改/book/hugo.toml里面的
+theme= 'hugo-book'
+languageCode = 'zh'
+defaultContentLanguage = 'zh'
+hasCJKLanguage = true
+3. 修改 theme 里的 i18n为
+- id: bookSearchConfig
+  translation: |
+    {
+      encode: false,
+      tokenize: function(str) {
+        return str.replace(/([\x00-\x7F] | ' ')/g, '').split('');
+      }
+    }
