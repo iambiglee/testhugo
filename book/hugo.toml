@@ -4,3 +4,13 @@ theme= 'hugo-book'
 languageCode = 'zh'
 defaultContentLanguage = 'zh'
 hasCJKLanguage = true
+[languages]
+[languages.en]
+languageName = 'English'
+contentDir = 'content.en'
+weight = 2
+
+[languages.zh]
+languageName = 'Chinese'
+contentDir = 'content'
+weight = 1
