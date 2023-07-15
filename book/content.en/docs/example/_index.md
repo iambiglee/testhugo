@@ -4,9 +4,9 @@ bookFlatSection: true
 title: "Example Site"
 ---
 
-# 介绍
+# Introduction
 
-## 测试中文检索是否有效
+## Ferre hinnitibus erat accipitrem dixi Troiae tollens
 
 Lorem markdownum, a quoque nutu est *quodcumque mandasset* veluti. Passim
 inportuna totidemque nympha fert; repetens pendent, poenarum guttura sed vacet
