@@ -18,8 +18,8 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
-          # extended: true
+          hugo-version: '0.115.1'
+          extended: true
 
       - name: Build
         run: cd book &&hugo
@@ -29,6 +29,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           external_repository: iambiglee/iambiglee.github.io  # 修改为你的 GitHub Pages 仓库
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token:: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./public
           publish_branch: master
