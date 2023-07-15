@@ -33,5 +33,5 @@ jobs:
         with:
           external_repository: iambiglee/iambiglee.github.io  # 修改为你的 GitHub Pages 仓库
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./book/public
           publish_branch: master
