@@ -29,6 +29,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           external_repository: iambiglee/iambiglee.github.io  # 修改为你的 GitHub Pages 仓库
-          github_token: ${{ CATMQ_TOKEN }}
+          github_token: ${{ secrets.CATMQ_TOKEN }}
           publish_dir: ./public
           publish_branch: master
