@@ -3,7 +3,7 @@ title: Introduction
 type: docs
 ---
 
-# 测试页面功能
+# 测试页面功能-new
 
 {{< columns >}}
 ## 测试页面功能
