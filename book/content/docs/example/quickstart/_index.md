@@ -38,7 +38,7 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 | :------------ | ----: |
 | version       | 5.7.0 |
 
-catmq 需要访问字典表`information_schema.tables`，来获取表的自增信息，来计算待处理消息等信息。所以需要确保此表能及时更新。 对于mysql 8以上版本推荐查看 show variables like '%information_schema_stats%'; set global information_schema_stats_expiry=10; 设置字典表的更新时间。
+CatMQ 需要访问字典表`information_schema.tables`，来获取表的自增信息，来计算待处理消息等信息。所以需要确保此表能及时更新。 对于mysql 8以上版本推荐查看 show variables like '%information_schema_stats%'; set global information_schema_stats_expiry=10; 设置字典表的更新时间。
 
 ##（二）安装步骤
 
@@ -75,20 +75,22 @@ spring.datasource.password = root
 
 注意：测试demo暂时还不能启动（需要等到消息库初始化完成，并且在portal上手动创建测试程序所需的topic、consumerGroup、订阅关系以后可以启动）
 5. 启动验证系统。
-在chrome浏览器访问 http://localhost:8080/ 如果出现下图表示PMQ服务端启动正常。
+在chrome浏览器访问 http://localhost:8080/ 如果出现下图表示CatMQ服务端启动正常。
 访问 http://localhost:8090/ 如果出现登录页面，并且可以登录成功，则证明可以正常访问，用户名和密码都是：`mqadmin`
-
+![img.png](../../../pic/quickstartborke.png)
 ## (三)元数据的初始化
 
 为了能够启动测试，我们需要初始化一些数据
 
 1. 初始化消息的存储位置
 
-   1. 启动catmq的管理页面(catmq-ui模块)，通过账号和密码`mqadmin`登录系统。然后点击左侧的“数据节点管理”
-   2. 点击创建
-   3. 跳出的数据库详细信息中，分为主库和从库，如果没有从库可以不填，数据库是我们上文中提到的mq_suc 的连接信息。
+   1. 启动CatMQ的管理页面(CatMQ-ui模块)，通过账号和密码`mqadmin`登录系统。然后点击左侧的“DataNode”
+     ![img.png](../../../pic/datanodedetail.png)
+   2. 点击 "Create"
+     ![img.png](../../../pic/datanodecreate.png)
+   3. 跳出的数据库详细信息中，分为主库(master)和从库(slave)，如果没有从库可以不填，数据库是我们上文中提到的mq_suc 的连接信息。
 
-   > 注意：如果“”数据库名”填写的是正常消息库的名字，则“消息类型”需选择正常队列消息（如上图标红所示）。如果“”数据库名”填写的是失败消息库的名字，则“消息类型”需选择失败队列消息。
+   > 注意：如果“”Database”填写的是正常消息库的名字，则“Store Type”需选择normal（如上图标红所示）。如果“”Database”填写的是失败消息库的名字，则“Store Type”需选择Abnormal。
    >
 
    4. 点击“提交”，如果看到如下记录，则说明message_node_01这一个节点初始化成功。
