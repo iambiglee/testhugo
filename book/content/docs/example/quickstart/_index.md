@@ -102,11 +102,27 @@ messageQueue.xml文件中定义了comsumerGroup、topic、以及它们之间的�
 
 demo就是在项目中的模式是catmqExample,这里我们已经做好了messageQueue.xml的配置，此次您无需做任何修改
 
-1. 新建topic
-   登录系统管理页面Portal,默认为localhost:8090, 初始化的用户名和密码都为：admin。登录进入以后，点击页面左侧的消息主题管理进入如下画面
-
-   点击“创建”按钮，进入topic 创建界面，然后再“topic名称处”输入test1
-
+1. 新建topic  
+   登录系统管理页面Portal,默认为localhost:8090, 初始化的用户名和密码都为：mqadmin。登录进入以后，点击页面左侧的消息主题管理进入如下画面  
+   ![img.png](img.png)  
+   点击“创建”按钮，进入topic 创建界面，然后再“topic名称处”输入testtopic  
+   ![img_1.png](img_1.png)  
    点击“提交”完成topic的创建。
-2. 新建ConsumerGroup
-   再管理界面，点击左侧的消费者组管理，然后点击“创建”按钮，进入consumeGroup创建界面：
+2. 新建ConsumerGroup  
+   在管理界面，点击左侧的消费者组管理，然后点击“创建”按钮，进入consumeGroup创建界面：  
+   ![img_2.png](img_2.png)
+   我们创建一个名为testConsumerGroup的consumerGroup  
+   ![img_3.png](img_3.png)
+   创建成功之后，可以看到页面以及创建成功
+   ![img_4.png](img_4.png)
+3. 创建订阅关系
+   建立consumerGroup和topic的关联,点击上一个画面中的subscribe开始订阅  
+   ![img_5.png](img_5.png)  
+   点击添加订阅，创建订阅关系  
+   ![img_7.png](img_7.png)  
+   点击确认，订阅成功
+   ![img_8.png](img_8.png)
+   
+4. 启动客户端的demo,运行程序
+   进入 'cat-mq-client-test\target' 下面执行 ‘java  -jar mq-client-test-001-1.0.0.jar --spring.profiles.active=fat’ 启动客户端demo 
+5. 测试消息的发送和消息的消费

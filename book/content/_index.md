@@ -7,15 +7,16 @@ type: docs
 
 ## 1.1、创建消息主题（即topic）
 
-发送方（producer）发消息到指定Topic之前，需要通过catMQ的portal创建该Topic，如果该Topic已存在则无须创建。下面演示一下如何创建Topic，和创建Topic时的注意事项：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/754835/1697876366984-c221e449-c81e-4d7f-aa02-15c2cfd6db11.png#averageHue=%23fcc4c1&clientId=ua80d89b2-d6e1-4&from=paste&height=665&id=u2e4b2fb0&originHeight=1330&originWidth=2700&originalType=binary&ratio=2&rotation=0&showTitle=false&size=307204&status=done&style=none&taskId=ud443f7e6-3e74-498a-8eaf-3fa185b8bd9&title=&width=1350)
+发送方（producer）发消息到指定Topic之前，需要通过catMQ的portal创建该Topic，如果该Topic已存在则无须创建。下面演示一下如何创建Topic，和创建Topic时的注意事项：<br />![image.png2](https://cdn.nlark.com/yuque/0/2023/png/754835/1697876366984-c221e449-c81e-4d7f-aa02-15c2cfd6db11.png#averageHue=%23fcc4c1&clientId=ua80d89b2-d6e1-4&from=paste&height=665&id=u2e4b2fb0&originHeight=1330&originWidth=2700&originalType=binary&ratio=2&rotation=0&showTitle=false&size=307204&status=done&style=none&taskId=ud443f7e6-3e74-498a-8eaf-3fa185b8bd9&title=&width=1350)
 
 
-点击最下方的“立即提交”按钮，完成topic的创建，进入如下页面：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/754835/1697876461844-2791bfd9-b6a9-4527-9483-aa98e77f5c25.png#averageHue=%23f8f8f8&clientId=ua80d89b2-d6e1-4&from=paste&height=791&id=u553fe468&originHeight=1582&originWidth=2434&originalType=binary&ratio=2&rotation=0&showTitle=false&size=224000&status=done&style=none&taskId=uec0eebaa-377b-4096-983e-d5e62483061&title=&width=1217)<br />![](img/createTopicResult.png#id=ES8KW&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+点击最下方的“立即提交”按钮，完成topic的创建，进入如下页面：<br /> ![image.png](https://cdn.nlark.com/yuque/0/2023/png/754835/1697876461844-2791bfd9-b6a9-4527-9483-aa98e77f5c25.png)<br />![](img/createTopicResult.png#id=ES8KW&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
-图中可以看到我们刚刚创建的topic：testtopic<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/754835/1697876570508-f6281d96-2e3a-4827-b013-0afaef3ae912.png#averageHue=%23f3f3f3&clientId=ua80d89b2-d6e1-4&from=paste&height=440&id=u3d4cab5f&originHeight=880&originWidth=3178&originalType=binary&ratio=2&rotation=0&showTitle=false&size=186004&status=done&style=none&taskId=u9b3ae8da-0b67-4ace-b559-b964307bb14&title=&width=1589)
+图中可以看到我们刚刚创建的topic：testtopic   
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/754835/1697876570508-f6281d96-2e3a-4827-b013-0afaef3ae912.png)
 
 点击每条记录最左侧的蓝色图标，可以查看该topic的操作记录。
-
+<img alt="avatar" src="http://baidu.com/pic/doge.png"/>  
 创建topic的注意事项：
 
 1. Topic的名字不能以“_fail”结尾，因为系统以“_fail”结尾的Topic默认为存储失败消息的topic。
