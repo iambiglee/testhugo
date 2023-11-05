@@ -1,6 +1,6 @@
 ---
-bookCollapseSection: true
-weight: 20
+weight: 12
+title: "快速开始"
 ---
 # 快速开始
 
@@ -97,10 +97,10 @@ spring.datasource.password = root
 
 ## (四)客户端的demo显示
 
-完成上述步骤以后，我们就可以去catmq的mq-client-demo模块中启动该模块
-messageQueue.xml文件中定义了comsumerGroup、topic、以及它们之间的订阅关系（含义：test1sub订阅了topic：test1和test4）。receiverType指定的是每一个topic的消息处理类。
+完成上述步骤以后，我们就可以去CatMQ的mq-client-demo模块中启动该模块
+messageQueue.xml文件中定义了ConsumerGroup、Topic、以及它们之间的订阅关系（含义：test1sub订阅了topic：test1和test4）。receiverType指定的是每一个topic的消息处理类。
 
-demo就是在项目中的模式是catmqExample,这里我们已经做好了messageQueue.xml的配置，此次您无需做任何修改
+demo就是在项目中的模式是CatMQ 的最小可执行的Example,这里我们已经做好了messageQueue.xml的配置，此次您无需做任何修改
 
 1. 新建topic  
    登录系统管理页面Portal,默认为localhost:8090, 初始化的用户名和密码都为：mqadmin。登录进入以后，点击页面左侧的消息主题管理进入如下画面  
@@ -123,6 +123,13 @@ demo就是在项目中的模式是catmqExample,这里我们已经做好了messag
    点击确认，订阅成功
    ![img_8.png](img_8.png)
    
-4. 启动客户端的demo,运行程序
-   进入 'cat-mq-client-test\target' 下面执行 ‘java  -jar mq-client-test-001-1.0.0.jar --spring.profiles.active=fat’ 启动客户端demo 
+4. 启动客户端的demo,运行程序 
+   1. 进入 'cat-mq-client-test\target' 下面执行 ‘java  -jar mq-client-test-001-1.0.0.jar --spring.profiles.active=fat’ 启动客户端demo
+   2. 进入‘ConsumerGroupConsumer’, 出现下面的数据表示客户端启动成功,已经成功注册到系统中
+   ![img_9.png](img_9.png)
 5. 测试消息的发送和消息的消费
+   1. 在浏览器中的网址栏，或者postman中输入下面的URL地址： `http://localhost:8087/test1?topicName=testtopic&count=2`  这里表示给Topic: `testtopic` 发送5条消息
+   2. 在 `catmq-client-test`的 log 中会看到 下面的信息表示消息的发送和消费都正常。
+   ![img_10.png](img_10.png)
+6. 常见问题
+   如果应用无法启用，请检查8080，8087，8087 端口是否被占用。

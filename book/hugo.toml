@@ -1,5 +1,5 @@
 baseURL = 'http://localhost/'
-title = 'My New Hugo Site'
+title = 'CatMQ Doc'
 theme= 'hugo-book'
 languageCode = 'zh'
 defaultContentLanguage = 'zh'
