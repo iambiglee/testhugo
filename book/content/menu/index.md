@@ -1,5 +1,5 @@
 ---
-headless: false
+headless: true
 ---
 
 - [概念介绍]({{< relref "/docs/example/introduce" >}})
