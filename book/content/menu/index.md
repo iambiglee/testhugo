@@ -9,5 +9,5 @@ headless: false
 - [运维部属]({{< relref "/docs/example/deployment" >}})
 - [开发指南]({{< relref "/docs/example/develop" >}})
 - [界面操作]({{< relref "/docs/example/page" >}})
-- [个人简历]({{< relref "/docs/example/cv" >}})
+- [个人简历]({{< relref "/docs/cv" >}})
 <br />
