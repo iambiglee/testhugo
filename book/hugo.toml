@@ -1,4 +1,4 @@
-baseURL = 'http://localhost/'
+baseURL = 'https://iambiglee.github.io/'
 title = 'CatMQ Doc'
 theme= 'hugo-book'
 languageCode = 'zh'
