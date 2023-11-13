@@ -40,7 +40,7 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 
 CatMQ 需要访问字典表`information_schema.tables`，来获取表的自增信息，来计算待处理消息等信息。所以需要确保此表能及时更新。 对于mysql 8以上版本推荐查看 show variables like '%information_schema_stats%'; set global information_schema_stats_expiry=10; 设置字典表的更新时间。
 
-##（二）安装步骤
+## （二）安装步骤
 
 1. 在github上，下载代码到本地，以windows 系统为例，下面所有的项目默认目录为d://catmq.
 2. 创建数据库
@@ -78,6 +78,8 @@ spring.datasource.password = root
 在chrome浏览器访问 http://localhost:8080/ 如果出现下图表示CatMQ服务端启动正常。
 访问 http://localhost:8090/ 如果出现登录页面，并且可以登录成功，则证明可以正常访问，用户名和密码都是：`mqadmin`
 ![img.png](../../../pic/quickstartborke.png)
+
+
 ## (三)元数据的初始化
 
 为了能够启动测试，我们需要初始化一些数据

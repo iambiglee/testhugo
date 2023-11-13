@@ -5,32 +5,25 @@ title: "运维部属"
 ---
 
 
-# CatMq的领域模型
-CatMq 是一款在kafka基础上发展出来的一款典型的消息队列中间件，使用异步通信的方式和发布订阅模型消息传输队列。通信方式和传输模型的具体说明可以看下文的通信方式介绍和消息传输模型。CatMq具有异步通信的优势，系统拓扑简单，系统间耦合低，主要应用于异步解耦，流量削峰填谷的场景。
+# 部署文档
 
-## CatMq 设计的领域模型
+## 单机部署
+单机部署可以参考另一篇文章Quickstart。
+- [快速开始]({{< relref "/docs/example/quickstart" >}})
 
-## 消息（Message）
+## 分布式部署
+CatMQ 服务端需要部署的两个包是`CatMQ-rest` （server端）和`CatMQ-ui`(portal端), 并且server端和portal端都是无状态，并且内部自制了简单
+的服务发现功能，所以可以在不搭配其他的分布式组件的形式下使用和发布。      
+只需要在\catmq-rest\src\main\resources 和 \catmq-ui\src\main\resources 下添加对应的环境配置即可，例如添加fat环境，
+只需要在上面对应的目录中添加application-fat.properties 文件即可，对应的配置项跟其他环境一样，只是值可能不同。
+</br>
+CatMQ中自制的服务发现功能，将各个server端和portal端的状态信息都存在数据库中，并且每隔5秒钟注册心跳，所以只要server端和portal端成功链接上
+数据库即可自动服务发现。这种方案也可以结合Eureka , nginx, nacos 等服务发现的组件。
+</br>
+CatMQ 分布式部署重点在于数据库的集群部署，建议使用主从数据库的方式部署元数据库（1主2从），并且交由infrastructure 运维团队运维。确保元数据
+正常使用. 部署的架构图如下所示：
 
-## 消费者组（ConsumerGroup）
-
-## 消费者（Consumer）
-
-## 队列（Queue）
-
-## 消息偏移（MessageQueeuOffset）
-
-## 消息标签
-
-## 生产者/消费者（product/consumer）
-
-## 消息订阅（subscribe）
-
-## 服务端（Broke）
-
-## 管理端（Portal）
-
-## 消息标签(MessageTage)
+![img.png](img.png)
 
 
 

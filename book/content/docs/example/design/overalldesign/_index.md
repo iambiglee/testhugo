@@ -1,9 +1,7 @@
 ---
-bookCollapseSection: true
-weight: 14
+weight: 1
 title: "整体设计"
 ---
-
 
 # 整体设计
 
@@ -26,12 +24,12 @@ start模块，动手实现一个队列 demo，会有助于你更好的了解整�
     MySQL的数据表，每个主题可以有多个 Queue, 可以类比为 Kafka
     中的partition.
 
-三种之间的关系如下图所示![](./media/document_image_rId4.png){width="6.6851859142607175in"
+三种之间的关系如下图所示![](../media/document_image_rId4.png){width="6.6851859142607175in"
 height="3.8367104111986in"}
 
 ## 2. 架构模块
 
-架构模块如下图所示，图中各个模块的说明如下![](./media/document_image_rId5.png){width="6.8518525809273845in"
+架构模块如下图所示，图中各个模块的说明如下![](../media/document_image_rId5.png){width="6.8518525809273845in"
 height="3.8025754593175853in"}
 
 1.  Broker  
@@ -108,7 +106,7 @@ height="3.8025754593175853in"}
     对应的关系
 
 8.  ConsumerGroupTopic: 用来记录 ConsumerGroup 和 Topic
-    对应的关系![](./media/document_image_rId6.png){width="5.0in"
+    对应的关系![](../media/document_image_rId6.png){width="5.0in"
     height="3.7in"}
 
 
