@@ -2,13 +2,12 @@
 headless: true
 ---
 
-- [**Example Site**]({{< relref "/docs/example" >}})
-- [Table of Contents]({{< relref "/docs/example/table-of-contents" >}})
-  - [With ToC]({{< relref "/docs/example/table-of-contents/with-toc" >}})
-  - [Without ToC]({{< relref "/docs/example/table-of-contents/without-toc" >}})
-- [Collapsed]({{< relref "/docs/example/collapsed" >}})
-  - [3rd]({{< relref "/docs/example/collapsed/3rd-level" >}})
-    - [4th]({{< relref "/docs/example/collapsed/3rd-level/4th-level" >}})
-<br />
-
+- [概念介绍]({{< relref "/docs/example/introduce" >}})
+- [快速开始]({{< relref "/docs/example/quickstart" >}})
+- [功能特性]({{< relref "/docs/example/functions" >}})
+- [功能设计]({{< relref "/docs/example/design" >}})
+- [运维部属]({{< relref "/docs/example/deployment" >}})
+- [开发指南]({{< relref "/docs/example/develop" >}})
+- [界面操作]({{< relref "/docs/example/page" >}})
+- [个人简历]({{< relref "/docs/cv" >}})
 <br />
