@@ -1,19 +1,20 @@
 ---
 weight: 2
 bookFlatSection: true
-title: "个人介绍"
+title: "About ME"
 ---
 
-## 个人介绍
-我是巴熊，一位对java软件工程领域充满热情的软件工程师
+## Self Introduce
+I am Barack, a Software engineer
 
-## 教育背景
-安徽农业大学 电子信息工程 本科
+## Education
+Anhui Agricultural University, Bachelor of Electronic Information Engineering （2014~2018）
 
-## 技能
-- **编程语言**：Java ，GO
-- **工具**：IDEA, GIT,SVN,CI-CD工具
-- **其他技能**：很强的沟通能力，很强的问题解决能力，很强的任务管理能力，很强的产品意识，很强的创新能力，较强的领导力
+## Skill
+- **Programming Language**: Java, GO
+- **Tools**: IDEA, GIT, SVN, CI-CD tools
+- **Other skills**: Strong communication skills, strong problem-solving skills, strong task management skills, 
+- strong product awareness, strong innovation skills, strong leadership
 
 
 

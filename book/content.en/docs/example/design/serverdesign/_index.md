@@ -1,6 +1,6 @@
 ---
 weight: 2
-title: "服务端设计"
+title: "Server Design"
 ---
 # Server Design
 

@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: "整体设计"
+title: "Overall Design"
 ---
 
 # Overall Design

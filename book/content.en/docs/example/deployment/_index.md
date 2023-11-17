@@ -1,27 +1,24 @@
 ---
 
 weight: 15
-title: "运维部属"
+title: "Deplyment"
 ---
 
 
-# 部署文档
+# Deployment Document
 
-## 单机部署
-单机部署可以参考另一篇文章Quickstart。
-- [快速开始]({{< relref "/docs/example/quickstart" >}})
+## Single-Server Deployment
+For single-server deployment, please refer to another article 
+- [Quickstart]({{< relref "/docs/example/quickstart" >}})
 
-## 分布式部署
-CatMQ 服务端需要部署的两个包是`CatMQ-rest` （server端）和`CatMQ-ui`(portal端), 并且server端和portal端都是无状态，并且内部自制了简单
-的服务发现功能，所以可以在不搭配其他的分布式组件的形式下使用和发布。      
-只需要在\catmq-rest\src\main\resources 和 \catmq-ui\src\main\resources 下添加对应的环境配置即可，例如添加fat环境，
-只需要在上面对应的目录中添加application-fat.properties 文件即可，对应的配置项跟其他环境一样，只是值可能不同。
-</br>
-CatMQ中自制的服务发现功能，将各个server端和portal端的状态信息都存在数据库中，并且每隔5秒钟注册心跳，所以只要server端和portal端成功链接上
-数据库即可自动服务发现。这种方案也可以结合Eureka , nginx, nacos 等服务发现的组件。
-</br>
-CatMQ 分布式部署重点在于数据库的集群部署，建议使用主从数据库的方式部署元数据库（1主2从），并且交由infrastructure 运维团队运维。确保元数据
-正常使用. 部署的架构图如下所示：
+## Distributed Deployment
+CatMQ server has two components that need to be deployed: CatMQ-rest (server-side) and CatMQ-ui (portal-side). Both the server-side and portal-side are stateless and have an internally built simple service discovery feature. Therefore, they can be used and deployed without the need for other distributed platform(Like Spring Cloud Eureka, zookeeper).
+
+To deploy, simply add the corresponding environment configurations in the following directories: `\catmq-rest\src\main\resources` and `\catmq-ui\src\main\resources`. For example, to add a configuration for the 'fat' environment, you only need to add the `application-fat.properties` file in the respective directory. The configuration items are the same as in other environments, with the values possibly being different.
+
+CatMQ's self-made service discovery feature stores the status information of each server-side and portal-side in the database. Every 5 seconds, a heartbeat is registered. As long as the server-side and portal-side successfully connect to the database, automatic service discovery is enabled. This approach can also be combined with service discovery components such as Eureka, Nginx, zookeeper, etc.
+
+The key aspect of CatMQ's distributed deployment lies in the cluster deployment of the database. It is recommended to deploy the metadata database using a master-slave configuration (1 master, 2 slaves) and entrust it to the infrastructure operations team for maintenance. This ensures the normal usage of metadata. The deployment architecture is illustrated in the following diagram:
 
 ![img.png](img.png)
 

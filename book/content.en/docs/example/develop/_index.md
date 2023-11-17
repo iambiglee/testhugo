@@ -1,11 +1,11 @@
 ---
 
 weight: 16
-title: "开发须知"
+title: "Development Instructions"
 ---
 
 
-# CatMQ develop guide
+# CatMQ Develop Guide
 This module mainly introduces the code structure and project modules of the project, which is a convenient reference 
 for students who plan to study this project carefully and those who want to develop it again.
 
