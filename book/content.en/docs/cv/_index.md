@@ -5,8 +5,8 @@ title: "About ME"
 ---
 
 ## Self Introduce
-I am Barack, a Software engineer, and I am also a good forward of soccer. 
-
+I am Barack, a Software engineer, and I am also a good forward of soccer.   
+![img_1.png](img_1.png)
 ## Education
 Anhui Agricultural University, Bachelor of Electronic Information Engineering （2014~2018）
 
